@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, session, request
+from flask import Flask, render_template, request, url_for, redirect, session, request, redirect
 
 app = Flask(__name__) 
 
@@ -11,7 +11,8 @@ def index():
 def home():
     if request.method == 'POST':
         result = request.form['scope'] #result is the user's search entry for a job scope
-        return render_template("result.html")
+        new_route = f'/result/{result}'
+        return redirect(new_route)
     else:
         return render_template("index.html")
 
@@ -20,10 +21,11 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/result", methods=['GET', 'POST'])
-def result():
-    if request.method == 'POST':
-        return render_template("result.html")
+@app.route("/result/<scope>", methods=['GET', 'POST'])
+def result(scope):
+    if request.method == 'GET':
+        #render result template with values gotten from db for 'scope'
+        return render_template("result.html", scope=scope)
 
 
     
