@@ -2,11 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect, session, r
 
 app = Flask(__name__) 
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-
+@app.route("/", methods = ['GET','POST'])
 @app.route("/home", methods = ['GET','POST']) 
 def home():
     if request.method == 'POST':
