@@ -10,7 +10,7 @@ def index():
 @app.route("/home", methods = ['GET','POST']) 
 def home():
     if request.method == 'POST':
-        result = request.form
+        result = request.form['scope'] #result is the user's search entry for a job scope
         return render_template("result.html")
     else:
         return render_template("index.html")
