@@ -391,3 +391,35 @@
     padding-right: 0;
     border-right: none;
 }
+
+#h1 {
+    font-size: 50px;
+}
+
+#p {
+    font-size: 18px;
+}
+
+#h2 {
+    color: blueviolet;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font
+}
+
+#img1 {
+    width: 75%;
+    height: 100%;
+
+    
+}
+
+
+}
+
+#home {
+    color: rgb(3, 83, 3);
+    margin-right: 100px;
+    
+}
