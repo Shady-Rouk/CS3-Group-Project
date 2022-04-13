@@ -9,6 +9,6 @@ jobsDB = db.companies
 # jobsDB.insert_one(
 #     {"company_name": "Company X", "job_scope": {"tech": "www.tech.com", "business": "www.business.com", "finance": "www.finance.com"}}
 # )
-
-# a = jobsDB.find_one({"job_scope.tech": {"$exists": 1}}) #syntax to check if the inner field "tech" exists in "job_scope" field
+# scope = input("scope: ")
+# a = jobsDB.find_one({"job_scope.tech": {"$exists": 1}} , {"company_name":1, "job_scope."+str(scope):1, "_id":0}) #syntax to check if the inner field "scope" exists in "job_scope" field and return the document with only the 'scope' link
 # print(a) 
