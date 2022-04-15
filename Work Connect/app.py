@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, session, request, redirect
+from model import get_details_from_db
 
 app = Flask(__name__) 
 
@@ -20,8 +21,15 @@ def about():
 @app.route("/result/<scope>", methods=['GET', 'POST'])
 def result(scope):
     if request.method == 'GET':
-        #render result template with values gotten from db for 'scope'
-        return render_template("result.html", scope=scope)
+        companies = get_details_from_db(scope)
+        #render result template with values in 'companies' from db for 'scope'
+        # scope = "tech"
+        # a = get_details_from_db(scope)
+        # for company in a:
+        #     print(company['company_name'].capitalize())
+        #     print("link: " + company["job_scope"][scope])
+        #sample use case
+        return render_template("result.html", scope=scope, companies=companies)
 
 
     
