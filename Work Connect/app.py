@@ -21,6 +21,7 @@ def about():
 @app.route("/result/<scope>", methods=['GET', 'POST'])
 def result(scope):
     if request.method == 'GET':
+        scope = scope.lower()
         companies = get_details_from_db(scope)
         #render result template with values in 'companies' from db for 'scope'
         # scope = "tech"
