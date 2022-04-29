@@ -23,6 +23,7 @@ def result(scope):
     if request.method == 'GET':
         scope = scope.lower()
         companies = get_details_from_db(scope)
+        companies = list(companies)
         #render result template with values in 'companies' from db for 'scope'
         # scope = "tech"
         # a = get_details_from_db(scope)
