@@ -463,3 +463,15 @@
 .dropdown:hover .dropbtn{
     background-color: rgb(8, 22, 15);
 }
+
+#result{
+    border-style:solid;
+    border-width: 3px;
+    border-color:#198754;
+    background-color: #F0F8FF;
+    color:black;
+}
+
+#link{
+    color:blue;
+}
