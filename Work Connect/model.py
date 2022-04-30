@@ -15,5 +15,7 @@ def get_details_from_db(scope):
     sponsors = jobsDB.find({"job_scope."+str(scope): {"$exists": 1}} , {"company_name":1, "job_scope."+str(scope):1, "_id":0})
     return sponsors
 
-# def seed():
-#     jobsDB.insert_many(companies)
+def seed():
+    jobsDB.insert_many(companies)
+
+# seed()
