@@ -9,13 +9,15 @@ Search-Result
 
     <!--Sample Code-->
     {% if companies %}
-        <h1>Displaying results for '{{scope}}'</h1>
         {% for company in companies%}
-            <p>Company name: {{company['company_name']}}</p>
-            <p>Link for {{scope}}: <a href="{{company['job_scope'][scope]}}">Click here</a></p>
+        <br>
+        <div class="container" id="result">
+            <p><b>Company:</b> <i>{{company['company_name']}}</i></p>
+            <p><a href="{{company['job_scope'][scope]}}" id="link">Job Link</a></p>
+        </div>
         {% endfor %}
     {% else %}
-        <h1>No results for '{{scope}}'</h1>
+        <h3>No results for '{{scope}}'</h3>
 
     {% endif %}
 
