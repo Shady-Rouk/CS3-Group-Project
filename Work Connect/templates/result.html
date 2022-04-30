@@ -6,7 +6,17 @@ Search-Result
 
 {% block content %}
 
-<h1>The content for result will go in this section</h1>
-<p>Displaying results for '{{scope}}'</p>
+
+    <!--Sample Code-->
+    {% if companies %}
+        <h1>Displaying results for '{{scope}}'</h1>
+        {% for company in companies%}
+            <p>Company name: {{company['company_name']}}</p>
+            <p>Link for {{scope}}: <a href="{{company['job_scope'][scope]}}">Click here</a></p>
+        {% endfor %}
+    {% else %}
+        <h1>No results for '{{scope}}'</h1>
+
+    {% endif %}
 
 {% endblock %}
