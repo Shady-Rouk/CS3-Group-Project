@@ -9,6 +9,7 @@ Search-Result
 
     <!--Sample Code-->
     {% if companies %}
+        <h3>Showing results for '{{scope.capitalize()}}'</h3>
         {% for company in companies%}
         <br>
         <div class="container" id="result">
