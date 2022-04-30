@@ -405,7 +405,6 @@
     font-size: 60px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font
 }
 
 #img1 {
@@ -416,10 +415,50 @@
 }
 
 
-}
 
 #home {
     color: rgb(3, 83, 3);
     margin-right: 100px;
     
+}
+
+.dropbtn{
+    background-color: rgb(8, 22, 15);
+    color: white;
+    padding: px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropbtn{
+    background-color: rgb(8, 22, 15);
 }
