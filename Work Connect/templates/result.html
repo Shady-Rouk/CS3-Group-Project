@@ -9,11 +9,12 @@ Search-Result
 
     <!--Sample Code-->
     {% if companies %}
+        <h3>Showing results for '{{scope.capitalize()}}'</h3>
         {% for company in companies%}
         <br>
         <div class="container" id="result">
             <p><b>Company:</b> <i>{{company['company_name']}}</i></p>
-            <p><a href="{{company['job_scope'][scope]}}" id="link">Job Link</a></p>
+            <p><a href="{{company['job_scope'][scope]}}" id="link" target="_blank">Job Link</a></p>
         </div>
         {% endfor %}
     {% else %}
